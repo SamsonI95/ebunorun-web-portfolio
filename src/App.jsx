@@ -41,7 +41,6 @@ function App() {
           <h3 className="font-bold text-2xl bg-gradient-to-r from-blue-600 via-[#216aff] to-[#913aff] inline-block text-transparent bg-clip-text">
             ebunorun.codev
           </h3>
-
           <div className="hidden font-semibold text-xl space-x-7 md:flex ">
             <a href="/home" className="hover:text-[#913aff]">
               Home
@@ -83,7 +82,7 @@ function App() {
         <section className="flex flex-col lg:flex-row items-center justify-center mt-5 lg:mt-10 space-y-[3rem] lg:space-y-0 lg:space-x-[5rem]">
           <div className="md:hidden">
             <img
-              src="src/assets/IMG_20230725_150908_723.jpg"
+              src="/IMG_20230725_150908_723.jpg"
               alt="ebunorun"
               className="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-[#913aff] animated-border"
             />
