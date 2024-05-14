@@ -8,6 +8,11 @@ import webProjects from "./webProjects.json";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
+import { LuMail } from "react-icons/lu";
+import { FaPhoneAlt } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
   //mobile navbar
@@ -28,7 +33,6 @@ function App() {
       );
     });
   }, []);
-
 
   return (
     <>
@@ -123,12 +127,12 @@ function App() {
           </div>
         </section>
         <div className="border border-b-gray-300 mt-5"></div>
-        <section className="flex flex-col items-center">
+        <section className="relative flex flex-col items-center">
+          <h3 className="absolute left-[4.4rem] lg:left-[14.7rem] text-2xl lg:text-3xl font-semibold text-gray-500 mt-5 lg:mt-10">
+            Projects
+          </h3>
           {webProjects.map((item, index) => (
-            <div
-              key={index}
-              className="mt-7 mb-5 lg:mt-10 lg:mb-5"
-            >
+            <div key={index} className="mt-[5rem] mb-5 lg:mt-[8rem] lg:mb-5">
               <a href={item.link}>
                 <h3 className="lg:text-2xl font-semibold text-gray-500 lg:hover:text-[#913aff]">
                   {item.title}
@@ -167,6 +171,35 @@ function App() {
           ))}
         </section>
         <div className="border border-b-gray-300 mt-5"></div>
+        <section className="text-white flex flex-col lg:flex-row lg:space-x-[5rem] py-3 lg:py-5 px-[4.4rem] lg:px-[14.7rem] bg-gradient-to-r from-blue-600 via-[#216aff] to-[#913aff] ">
+          <div>
+            <h3 className="text-2xl lg:text-3xl font-semibold  mt-5 lg:mt-10">
+              Contact Me:
+            </h3>
+            <div className="mt-[3rem]">
+              <div className="flex items-center space-x-3 text-xl lg:text-2xl">
+                <LuMail />
+                <a href="samsoniweibo@gmail.com">
+                  <p>samsoniweibo@gmail.com</p>
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 mt-5 mb-5 text-xl lg:text-2xl">
+                <FaPhoneAlt />
+                <p>+234-705-231-7420</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-2xl lg:text-3xl font-semibold mt-5 lg:mt-10">
+              Socials
+            </h3>
+            <ul className="flex items-center space-x-5 text-3xl lg:text-[40px]">
+              <li className="mt-5 lg:mt-8 hover:scale-125 hover:text-black hover:duration-200"><a href="https://github.com/SamsonI95"><FaGithub /></a></li>
+              <li className="mt-5 lg:mt-8 hover:scale-125 hover:text-black hover:duration-200"><a href="https://www.linkedin.com/in/samsoniweibo/"><FaLinkedin /></a></li>
+              <li className="mt-5 lg:mt-8 hover:scale-125 hover:text-black hover:duration-200"><a href="https://wa.link/57cb2d"><FaWhatsapp /></a></li>
+            </ul>
+          </div>
+        </section>
       </div>
     </>
   );
