@@ -101,7 +101,7 @@ function App() {
           </div>
           <div className="hidden md:block">
             <img
-              src="src/assets/IMG_20230725_150908_723.jpg"
+              src="/IMG_20230725_150908_723.jpg"
               alt="ebunorun"
               className="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-[#913aff] animated-border"
             />
@@ -111,18 +111,18 @@ function App() {
           <h2 className="font-bold text-2xl text-gray-500">Tech Stack:</h2>
           <div className="flex items-center space-x-2 space-y-5 lg:space-y-0 translate-x-[2.7rem] lg:translate-x-0">
             <img
-              src="src/assets/html.svg"
+              src="/html.svg"
               alt="html"
               className="w-[36px] h-[36px] lg:w-[48px] lg:h-[48px] translate-y-[10px] lg:translate-y-0"
             />
             <img
-              src="src/assets/css.svg"
+              src="/css.svg"
               alt="css"
               className="w-[36px] h-[36px] lg:w-[48px] lg:h-[48px]"
             />
-            <img src="src/assets/icons8-javascript.svg" alt="javascript" />
-            <img src="src/assets/react.svg" alt="react" />
-            <img src="src/assets/icons8-tailwind-css.svg" alt="tailwind" />
+            <img src="/icons8-javascript.svg" alt="javascript" />
+            <img src="/react.svg" alt="react" />
+            <img src="/icons8-tailwind-css.svg" alt="tailwind" />
           </div>
         </section>
         <div className="border border-b-gray-300 mt-5"></div>
