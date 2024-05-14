@@ -1,0 +1,20 @@
+[
+  {
+    "link": "http://www.hemdonor.com.ng",
+    "title": "Hemdonor",
+    "image": "src/assets/Hemdonor thumbnail.png",
+    "text": "Hemdonor is a blood donation platform connecting donors and blood banks in Nigeria. Register to save lives, find nearby blood banks, and get updates on blood drives and campaigns. Let's build a community of lifesavers!"
+  },
+  {
+    "link": "http://www.serene-support.com.ng",
+    "title": "Serene Support",
+    "image": "src/assets/serene-support thumbnail.png",
+    "text": "Connect with mental health resources and support. Find therapists, join online communities, and access tools for mental wellbeing. Take the first step towards a healthier mind - explore our platform and start your journey today!"
+  },
+  {
+    "link": "https://tropic-med-app.vercel.app/",
+    "title": "TropicMed",
+    "image": "src/assets/tropice med thumbnail.png",
+    "text": "Get medical care at your fingertips with Tropic Med! Book appointments, consult doctors online, and get medication delivered to your doorstep. Access a network of trusted pharmacies and healthcare professionals. Download now and take control of your health!"
+  }
+]
