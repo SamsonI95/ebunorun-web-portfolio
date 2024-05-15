@@ -44,13 +44,13 @@ function App() {
               ebunorun.codev
             </h3>
             <div className="hidden font-semibold text-xl space-x-7 md:flex ">
-              <Link href="/home" className="hover:text-[#913aff]">
+              <Link to="/home" className="hover:text-[#913aff]">
                 Home
               </Link>
-              <Link href="/project" className="hover:text-[#913aff]">
+              <Link to="/project" className="hover:text-[#913aff]">
                 Projects
               </Link>
-              <Link href="/contact" className="hover:text-[#913aff]">
+              <Link to="/contact" className="hover:text-[#913aff]">
                 Contact
               </Link>
             </div>
@@ -68,13 +68,13 @@ function App() {
               )}
               {isMenuOpen && (
                 <div className="absolute left-0 top-12 flex flex-col justify-center font-semibold text-xl bg-white shadow-lg p-5 w-full text-right space-y-5 ">
-                  <Link href="/home" className="hover:text-[#913aff]">
+                  <Link to="/home" className="hover:text-[#913aff]">
                     Home
                   </Link>
-                  <Link href="/project" className="hover:text-[#913aff]">
+                  <Link to="/project" className="hover:text-[#913aff]">
                     Projects
                   </Link>
-                  <Link href="/contact" className="hover:text-[#913aff]">
+                  <Link to="/contact" className="hover:text-[#913aff]">
                     Contact
                   </Link>
                 </div>
