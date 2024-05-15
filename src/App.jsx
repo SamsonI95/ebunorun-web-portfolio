@@ -44,15 +44,15 @@ function App() {
               ebunorun.codev
             </h3>
             <div className="hidden font-semibold text-xl space-x-7 md:flex ">
-              <Link to="/home" className="hover:text-[#913aff]">
+              <a href="#home" className="hover:text-[#913aff]">
                 Home
-              </Link>
-              <Link to="/project" className="hover:text-[#913aff]">
+              </a>
+              <a href="#project" className="hover:text-[#913aff]">
                 Projects
-              </Link>
-              <Link to="/contact" className="hover:text-[#913aff]">
+              </a>
+              <a href="#contact" className="hover:text-[#913aff]">
                 Contact
-              </Link>
+              </a>
             </div>
             <div className="md:hidden">
               {isMenuOpen ? (
@@ -68,20 +68,23 @@ function App() {
               )}
               {isMenuOpen && (
                 <div className="absolute left-0 top-12 flex flex-col justify-center font-semibold text-xl bg-white shadow-lg p-5 w-full text-right space-y-5 ">
-                  <Link to="/home" className="hover:text-[#913aff]">
+                  <a href="#home" className="hover:text-[#913aff]">
                     Home
-                  </Link>
-                  <Link to="/project" className="hover:text-[#913aff]">
+                  </a>
+                  <a href="#project" className="hover:text-[#913aff]">
                     Projects
-                  </Link>
-                  <Link to="/contact" className="hover:text-[#913aff]">
+                  </a>
+                  <a href="#contact" className="hover:text-[#913aff]">
                     Contact
-                  </Link>
+                  </a>
                 </div>
               )}
             </div>
           </nav>
-          <section id="/home" className="flex flex-col lg:flex-row items-center justify-center mt-5 lg:mt-10 space-y-[3rem] lg:space-y-0 lg:space-x-[5rem]">
+          <section
+            id="/home"
+            className="flex flex-col lg:flex-row items-center justify-center mt-5 lg:mt-10 space-y-[3rem] lg:space-y-0 lg:space-x-[5rem]"
+          >
             <div className="md:hidden">
               <img
                 src="/IMG_20230725_150908_723.jpg"
@@ -128,7 +131,10 @@ function App() {
             </div>
           </section>
           <div className="border border-b-gray-300 mt-5"></div>
-          <section id="/project" className="relative flex flex-col items-center">
+          <section
+            id="/project"
+            className="relative flex flex-col items-center"
+          >
             <h3 className="absolute left-[4.4rem] lg:left-[14.7rem] text-2xl lg:text-3xl font-semibold text-gray-500 mt-5 lg:mt-10">
               Projects
             </h3>
@@ -172,7 +178,10 @@ function App() {
             ))}
           </section>
           <div className="border border-b-gray-300 mt-5"></div>
-          <section id="/contact" className="text-white flex flex-col lg:flex-row lg:space-x-[5rem] py-3 lg:py-5 px-[4.4rem] lg:px-[14.7rem] bg-gradient-to-r from-blue-600 via-[#216aff] to-[#913aff] ">
+          <section
+            id="/contact"
+            className="text-white flex flex-col lg:flex-row lg:space-x-[5rem] py-3 lg:py-5 px-[4.4rem] lg:px-[14.7rem] bg-gradient-to-r from-blue-600 via-[#216aff] to-[#913aff] "
+          >
             <div>
               <h3 className="text-2xl lg:text-3xl font-semibold  mt-5 lg:mt-10">
                 Contact Me:
