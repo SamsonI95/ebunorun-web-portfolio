@@ -143,7 +143,7 @@ function App() {
             <img
               src="/IMG_20230725_150908_723.jpg"
               alt="ebunorun"
-              className="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] rounded-full border-2 border-[#913aff] animated-border"
+              className="w-[200px] h-[200px] lg:w-[400px] lg:h-[400px] border-2 border-[#913aff] animated-border"
             />
           </div>
         </section>
