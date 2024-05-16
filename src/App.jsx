@@ -6,7 +6,7 @@ import webProjects from "./webProjects.json";
 
 //Icon
 import { GiHamburgerMenu } from "react-icons/gi";
-import { IoMdCloseCircleOutline } from "react-icons/io";
+import { IoIosArrowDropupCircle, IoMdCloseCircleOutline } from "react-icons/io";
 import { FaLocationDot } from "react-icons/fa6";
 import { LuMail } from "react-icons/lu";
 import { FaPhoneAlt } from "react-icons/fa";
@@ -46,6 +46,30 @@ function App() {
       });
     }
   };
+
+  //Scroll to Top
+  const [isVisible, setIsVisible] = useState(false);
+
+  const arrowToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY > 100) {
+        // Adjust threshold as needed
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility);
+    };
+  }, []);
 
   return (
     <>
@@ -253,6 +277,16 @@ function App() {
               </li>
             </ul>
           </div>
+        </section>
+        <section>
+          <button
+            onClick={arrowToTop}
+            className={`fixed text-2xl bottom-10 right-10 z-10 rounded-full bg-[#913aff] text-white px-4 py-2 hover:bg-blue-500 ${
+              isVisible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <IoIosArrowDropupCircle />
+          </button>
         </section>
       </div>
     </>
