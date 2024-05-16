@@ -82,7 +82,7 @@ function App() {
 
   return (
     <>
-      <div  className={`App ${theme === "dark" ? "dark-theme" : ""}`}>
+      <div className={`App ${theme === "dark" ? "dark-theme" : ""}`}>
         <nav className="flex items-center justify-between px-5 py-3 lg:px-10 lg:py-5 lg:shadow-lg">
           <h3 className="font-bold text-2xl bg-gradient-to-r from-blue-600 via-[#216aff] to-[#913aff] inline-block text-transparent bg-clip-text">
             ebunorun.codev
@@ -110,7 +110,7 @@ function App() {
               Contact
             </a>
             <button onClick={toggleTheme}>
-              {theme === "light" ? <IoSunnyOutline/> : <IoIosMoon/>}
+              {theme === "light" ? <IoSunnyOutline /> : <IoIosMoon />}
             </button>
           </div>
           <div className="md:hidden">
@@ -148,6 +148,9 @@ function App() {
                 >
                   Contact
                 </a>
+                <button onClick={toggleTheme}>
+                  {theme === "light" ? <IoSunnyOutline /> : <IoIosMoon />}
+                </button>
               </div>
             )}
           </div>
