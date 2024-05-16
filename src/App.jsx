@@ -13,8 +13,17 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
+import { IoSunnyOutline } from "react-icons/io5";
+import { IoIosMoon } from "react-icons/io";
 
 function App() {
+  //theme setting
+  const [theme, setTheme] = useState("light"); // Default theme is light
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
   //mobile navbar
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -73,7 +82,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div  className={`App ${theme === "dark" ? "dark-theme" : ""}`}>
         <nav className="flex items-center justify-between px-5 py-3 lg:px-10 lg:py-5 lg:shadow-lg">
           <h3 className="font-bold text-2xl bg-gradient-to-r from-blue-600 via-[#216aff] to-[#913aff] inline-block text-transparent bg-clip-text">
             ebunorun.codev
@@ -100,6 +109,9 @@ function App() {
             >
               Contact
             </a>
+            <button onClick={toggleTheme}>
+              {theme === "light" ? <IoSunnyOutline/> : <IoIosMoon/>}
+            </button>
           </div>
           <div className="md:hidden">
             {isMenuOpen ? (

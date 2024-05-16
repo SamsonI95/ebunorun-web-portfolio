@@ -8,6 +8,11 @@ body {
   font-family: "Poppins";
 }
 
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
 /* Profile image container */
 @keyframes morph {
   0% {
@@ -22,13 +27,14 @@ body {
 }
 
 .animated-border {
-  animation:  morph 8s ease-in-out infinite;
+  animation: morph 8s ease-in-out infinite;
   border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
   transition: all 1s ease-in-out;
 }
 
 .typewriter-text {
   position: relative;
+  width: 449px;
 }
 
 .typewriter-text::before,
