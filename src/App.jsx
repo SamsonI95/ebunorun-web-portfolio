@@ -18,11 +18,30 @@ import { IoIosMoon } from "react-icons/io";
 
 function App() {
   //theme setting
-  const [theme, setTheme] = useState("light"); // Default theme is light
+  const [theme, setTheme] = useState(getInitialTheme());
+  const [isAutoMode, setIsAutoMode] = useState(true);
+
+  // Function to get initial theme based on time
+  function getInitialTheme() {
+    const hour = new Date().getHours();
+    return hour >= 6 && hour < 18 ? "light" : "dark"; // Assuming day is from 6 AM to 6 PM
+  }
 
   const toggleTheme = () => {
+    setIsAutoMode(false);
     setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
   };
+
+  // Effect to handle automatic theme switching
+  useEffect(() => {
+    if (isAutoMode) {
+      const intervalId = setInterval(() => {
+        setTheme(getInitialTheme()); // Update theme based on current time
+      }, 60000); // Check every minute (adjust as needed)
+
+      return () => clearInterval(intervalId); // Cleanup on component unmount
+    }
+  }, [isAutoMode]);
 
   //mobile navbar
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -151,6 +170,14 @@ function App() {
                 <button onClick={toggleTheme}>
                   {theme === "light" ? <IoSunnyOutline /> : <IoIosMoon />}
                 </button>
+                <label>
+                  <input
+                    type="checkbox"
+                    checked={isAutoMode}
+                    onChange={() => setIsAutoMode(!isAutoMode)}
+                  />
+                  Auto Mode
+                </label>
               </div>
             )}
           </div>
@@ -167,14 +194,14 @@ function App() {
             />
           </div>
           <div className="translate-x-[1rem] lg:translate-x-0">
-            <h1 className="typewriter-text font-bold text-gray-500 text-2xl lg:text-4xl">
+            <h1 className="typewriter-text font-bold text-2xl lg:text-4xl">
               FRONT END DEVELOPER
             </h1>
-            <p className="fade font-semibold text-gray-500 text-2xl w-[342px] lg:w-[500px] mt-3 lg:mt-5">
+            <p className="fade font-semibold  text-2xl w-[342px] lg:w-[500px] mt-3 lg:mt-5">
               Hi, I’m Samson Iweibo, an enthusiastic Front End Developer who’s
               always eager to embark on any project.
             </p>
-            <h4 className="fade flex items-center font-bold text-gray-500 text-md lg:text-2xl mt-3 lg:mt-5">
+            <h4 className="fade flex items-center font-bold  text-md lg:text-2xl mt-3 lg:mt-5">
               <FaLocationDot className="text-red-500" /> Lagos, Nigeria.
             </h4>
           </div>
@@ -187,7 +214,7 @@ function App() {
           </div>
         </section>
         <section className="mt-5 lg:mt-10 flex flex-col lg:flex-row items-center w-fit space-x-3 translate-x-[2rem] lg:translate-x-[14.5rem]">
-          <h2 className="font-bold text-2xl text-gray-500">Tech Stack:</h2>
+          <h2 className="font-bold text-2xl ">Tech Stack:</h2>
           <div className="flex items-center space-x-2 space-y-5 lg:space-y-0 translate-x-[2.7rem] lg:translate-x-0">
             <img
               src="/html.svg"
@@ -206,20 +233,20 @@ function App() {
         </section>
         <div className="border border-b-gray-300 mt-5"></div>
         <section id="project" className="relative flex flex-col items-center">
-          <h3 className="absolute left-[4.4rem] lg:left-[14.7rem] text-2xl lg:text-3xl font-semibold text-gray-500 mt-5 lg:mt-10">
+          <h3 className="absolute left-[4.4rem] lg:left-[14.7rem] text-2xl lg:text-3xl font-semibold  mt-5 lg:mt-10">
             Projects
           </h3>
           {webProjects.map((item, index) => (
             <div key={index} className="mt-[5rem] mb-5 lg:mt-[8rem] lg:mb-5">
               <a href={item.link}>
-                <h3 className="lg:text-2xl font-semibold text-gray-500 lg:hover:text-[#913aff]">
+                <h3 className="lg:text-2xl font-semibold  lg:hover:text-[#913aff]">
                   {item.title}
                 </h3>
               </a>
               <div className="flex flex-col lg:flex-row lg:space-x-[5rem] lg:mt-5">
                 {index === 1 && window.innerWidth >= 1024 ? (
                   <>
-                    <h4 className="text-sm lg:text-lg w-[300px] lg:w-[355px] text-gray-500">
+                    <h4 className="text-sm lg:text-lg w-[300px] lg:w-[355px] ">
                       {item.text}
                     </h4>
                     <a href={item.link}>
@@ -239,7 +266,7 @@ function App() {
                         className="shadow-lg w-[350px] lg:w-[450px] lg:h-[200px] mt-5 lg:mt-0 lg:hover:scale-125 duration-500"
                       />
                     </a>
-                    <h4 className="text-sm lg:text-lg w-[300px] lg:w-[355px] text-gray-500 mt-5 lg:mt-0">
+                    <h4 className="text-sm lg:text-lg w-[300px] lg:w-[355px]  mt-5 lg:mt-0">
                       {item.text}
                     </h4>
                   </>

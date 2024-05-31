@@ -6,6 +6,7 @@
 
 body {
   font-family: "Poppins";
+  color: #6B7280;
 }
 
 .dark-theme {
@@ -51,6 +52,10 @@ body {
   background: white;
   animation: typewriter var(--typewriterSpeed)
     steps(var(--typewriterCharacters)) 1s forwards;
+}
+
+.dark-theme .typewriter-text::before {
+  background: #333;
 }
 
 .typewriter-text::after {
