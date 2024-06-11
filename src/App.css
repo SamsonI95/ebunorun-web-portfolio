@@ -6,12 +6,16 @@
 
 body {
   font-family: "Poppins";
-  color: #6B7280;
+  color: #6b7280;
 }
 
 .dark-theme {
   background-color: #333;
   color: #fff;
+}
+
+.dark-nav {
+  background-color: #121212;
 }
 
 /* Profile image container */
